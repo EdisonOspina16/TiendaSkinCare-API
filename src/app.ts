@@ -20,7 +20,11 @@ app.use(express.urlencoded({ extended: true }));
 
 // Health check
 app.get("/health", (_req, res) => {
-  res.status(200).json({ status: "ok", timestamp: new Date().toISOString() });
+  res.status(200).json({
+    status: "ok",
+    message: "🌸 Tienda SkinCare API está viva y lista para cuidar tu piel 🌸",
+    timestamp: new Date().toISOString()
+  });
 });
 
 // Rutas versionadas
