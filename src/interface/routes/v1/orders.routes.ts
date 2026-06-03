@@ -11,5 +11,6 @@ router.use(authMiddleware);
 router.post("/", validateDto(SchemaValidator.validateCreateOrder), ordersController.create);
 router.get("/", ordersController.getAll);
 router.get("/:id", ordersController.getById);
+router.post("/:id/pay", ordersController.pay);
 
 export default router;
