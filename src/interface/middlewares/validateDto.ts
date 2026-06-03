@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 
 export function validateDto(validationFn: (body: any) => void) {
-  return (req: Request, res: Response, next: NextFunction) => {
+  return (req: Request, _res: Response, next: NextFunction) => {
     try {
       validationFn(req.body);
       next();
