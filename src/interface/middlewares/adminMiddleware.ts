@@ -3,7 +3,7 @@ import { ForbiddenError, UnauthorizedError } from "../../domain/errors/DomainErr
 
 export function adminMiddleware(
   req: Request,
-  res: Response,
+  _res: Response,
   next: NextFunction
 ) {
   if (!req.user) {

@@ -3,9 +3,9 @@ import { DomainError } from "../../domain/errors/DomainError";
 
 export function errorMiddleware(
   err: Error,
-  req: Request,
+  _req: Request,
   res: Response,
-  next: NextFunction
+  _next: NextFunction
 ) {
   if (err instanceof DomainError) {
     res.status(err.statusCode).json({

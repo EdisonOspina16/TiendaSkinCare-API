@@ -6,7 +6,7 @@ const jwtService = new JwtTokenService();
 
 export function authMiddleware(
   req: Request,
-  res: Response,
+  _res: Response,
   next: NextFunction
 ) {
   try {

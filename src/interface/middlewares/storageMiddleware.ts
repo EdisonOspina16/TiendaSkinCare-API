@@ -3,7 +3,7 @@ import { ValidationError } from "../../domain/errors/DomainError";
 
 export function storageMiddleware(
   req: Request,
-  res: Response,
+  _res: Response,
   next: NextFunction
 ) {
   try {
