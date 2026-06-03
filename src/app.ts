@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Health check
-app.get("/health", (_req, res) => {
+app.get("/", (_req, res) => {
   res.status(200).json({
     status: "ok",
     message: "🌸 Tienda SkinCare API está viva y lista para cuidar tu piel 🌸",
